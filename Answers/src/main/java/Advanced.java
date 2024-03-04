@@ -10,21 +10,70 @@ public class Advanced {
 
      */
     public String wordCensor(String sentence, String word, String newWord){
-        return null;
+        int i = 0;
+
+        String[] list = sentence.split(" ");
+
+
+        while(true){
+
+            if(Objects.equals(list[i], word)){
+                list[i] = newWord;
+                break;
+            }
+            else{
+                i++;
+            }
+        }
+        for(int x = 1 ; x < list.length  ; x++ ){
+            list[0] = list[0] + " " + list[x];
+
+
+        }
+        return list[0];
     }
 
 
     public String normalizingName(String firstName, String lastName){
-        return null;
+        firstName = firstName.toLowerCase();
+        lastName = lastName.toLowerCase();
+        String[] name1 = firstName.split("");
+        String[] lastname1 = lastName.split("");
+        name1[0] = name1[0].toUpperCase();
+        lastname1[0] = lastname1[0].toUpperCase();
+        for (int i = 1; i < name1.length; i++) {
+            name1[0]+=name1[i];
+        }
+        for (int x = 1; x < lastname1.length; x++) {
+            lastname1[0]+=lastname1[x];
+        }
+        if(name1[0] == " "){
+            return lastname1[0];
+        }
+        else if(lastname1[0] == " "){
+            return name1[0];
+        }
+        else {
+            return name1[0] + " " + lastname1[0];
+        }
     }
 
-    /**
-     * Removing repeated letter in a word
-     * @param word This input could have Consecutive repeated letters or not
-     * @return if word contains Consecutive repeated letters, one of the repeated letters should be omitted
-     */
     public String doubleChar(String word) {
-        return null;
+
+        String[] list = word.split("");
+        for(int i = 0 ; i < list.length - 1;){
+            if(!Objects.equals(list[i], list[i + 1]))
+            {
+                list[0] += list[i + 1];
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        return list[0];
+
     }
 }
 
