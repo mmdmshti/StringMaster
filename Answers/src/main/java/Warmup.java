@@ -31,7 +31,7 @@ public class Warmup {
             int s, new_num, count, count_1;
             count = 0;
             count_1 = 1;
-
+            int l;
 
             if (Objects.equals(searchForEven, "true")) {
                 while (true) {
