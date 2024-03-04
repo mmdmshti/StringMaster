@@ -1,3 +1,4 @@
+package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,7 +8,7 @@ public class StringTest {
     Advanced advanced = new Advanced();
     @Test
     public void wordFinder_test(){
-        assertEquals("Tem", warmup.wordFinder("Happy New Term", 1));
+        assertEquals("Happy", warmup.wordFinder("Happy New Term", 1));
         assertEquals(" Number = 4 is out Of Bound", warmup.wordFinder("Hello From Java", 4));
     }
     @Test

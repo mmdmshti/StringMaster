@@ -13,12 +13,7 @@ public class Advanced {
         return null;
     }
 
-    /**
-     * In this function You have a firstName and a lastName as Entry and you have to normalize them as a fullName
-     * @param firstName is a first name with irregular letters (example : hARry)
-     * @param lastName is a last name with irregular letters (example : pOtTeR)
-     * @return fullName is a normal full name that just the first letter of firstName & lastName is Capitalized (example : Harry Potter)
-     */
+
     public String normalizingName(String firstName, String lastName){
         return null;
     }
